@@ -17,6 +17,10 @@
   background-color: #4980dd;
 }
 
+.mode-button {
+  margin: 5px;
+}
+
 .dark-bg {
   background-image: url("../images/home-bg-dark.png");
 }
@@ -72,7 +76,6 @@ a {
 .slide {
   min-width: 100vw;
   min-height: 100vh;
-  scroll-snap-align: start;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -90,6 +93,7 @@ a {
 
 #container-0 {
   text-align: center;
+  margin: 5px;
 }
 
 #tagline {
@@ -212,7 +216,7 @@ a {
 }
 
 .correct {
-  background-color: #128527;
+  background-color: #219236;
 }
 
 .correct p {
