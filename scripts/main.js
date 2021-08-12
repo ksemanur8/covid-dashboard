@@ -1,7 +1,9 @@
 window.onload = function() {
     loadTheme();
     getArticles();
+    getCOVIDCaseData()
     getVaccineData();
+    getStringency();
 };
 
 function loadTheme() {
@@ -63,6 +65,19 @@ function getArticles() {
 
  }
 
+ function getCOVIDCaseData() {
+    fetch(`https://api.covid19api.com/summary`)
+    .then((response) => response.json())
+    .then((json) => handleCOVIDCaseData(json));
+ }
+
+ function handleCOVIDCaseData(data) {
+    let cases = data.Countries[184].TotalConfirmed;
+    let deaths = data.Countries[184].TotalDeaths;
+    document.getElementById("case-count").innerHTML += ` ${cases}`;
+    document.getElementById("death-count").innerHTML += ` ${deaths}`;    
+ }
+
  function getVaccineData() {
     fetch(`https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=1`)
     .then((response) => response.json())
@@ -73,9 +88,21 @@ function getArticles() {
     let USAVaccines = data[206].timeline;
     let date = Object.keys(USAVaccines);
     let vaccine_num = Object.values(USAVaccines);
-    document.getElementById("vaccine-count").innerHTML += `${vaccine_num[0]}`;
-    document.getElementById("vaccine-date").innerHTML += ` ${date[0]}`;
+    document.getElementById("vaccine-count").innerHTML += ` ${vaccine_num[0]}`;
+    document.getElementById("date").innerHTML += ` ${date[0]}`;
  }
+
+ function getStringency() {
+    fetch(`https://covidtrackerapi.bsg.ox.ac.uk/api/v2/stringency/actions/USA/2021-08-09`)
+    .then((response) => response.json())
+    .then((json) => handleStringency(json));
+ }
+
+ function handleStringency(data) {
+    let stringency_level = data.stringencyData.stringency;
+    document.getElementById("stringency-level").innerHTML += ` ${stringency_level}`;
+ }
+
  
 
 /* Game board functionality*/
