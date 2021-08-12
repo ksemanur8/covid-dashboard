@@ -48,6 +48,8 @@ function getArticles() {
         let img_url;
         if(articles.response.docs[i].multimedia.length > 0) {
             img_url = "https://static01.nyt.com/" + articles.response.docs[i].multimedia[0].url;
+        } else {
+            img_url = "../images/nytimes-log.png";
         }
         let summary = articles.response.docs[i].abstract;
         let link = articles.response.docs[i].web_url;
