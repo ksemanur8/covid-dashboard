@@ -49,7 +49,7 @@ function getArticles() {
         if(articles.response.docs[i].multimedia.length > 0) {
             img_url = "https://static01.nyt.com/" + articles.response.docs[i].multimedia[0].url;
         } else {
-            img_url = "../images/nytimes-log.png";
+            img_url = "https://static01.nyt.com/vi-assets/images/share/1200x675_nameplate.png";
         }
         let summary = articles.response.docs[i].abstract;
         let link = articles.response.docs[i].web_url;
