@@ -1,6 +1,7 @@
 window.onload = function() {
     loadTheme();
     getArticles();
+    getVaccineData();
 };
 
 function loadTheme() {
@@ -47,21 +48,35 @@ function getArticles() {
         let title = articles.response.docs[i].headline.main;
         let img_url;
         if(articles.response.docs[i].multimedia.length > 0) {
-            img_url = "https://static01.nyt.com/" + articles.response.docs[i].multimedia[0].url;
+            img_url = articles.response.docs[i].multimedia[0].url;
         } else {
-            img_url = "https://static01.nyt.com/vi-assets/images/share/1200x675_nameplate.png";
+            img_url = "vi-assets/images/share/1200x675_nameplate.png";
         }
         let summary = articles.response.docs[i].abstract;
         let link = articles.response.docs[i].web_url;
 
         document.getElementById(`article-title-${i}`).innerHTML += `${title}`;
-        document.getElementById(`article-img-${i}`).src = `${img_url}`;
+        document.getElementById(`article-img-${i}`).src = `https://static01.nyt.com/${img_url}`;
         document.getElementById(`article-summary-${i}`).innerHTML += `${summary}`;
         document.getElementById(`article-link-${i}`).setAttribute("href", `${link}`);
     }
 
  }
 
+ function getVaccineData() {
+    fetch(`https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=1`)
+    .then((response) => response.json())
+    .then((json) => handleVaccineData(json));
+ }
+
+ function handleVaccineData(data) {
+    let USAVaccines = data[206].timeline;
+    let date = Object.keys(USAVaccines);
+    let vaccine_num = Object.values(USAVaccines);
+    document.getElementById("vaccine-count").innerHTML += `${vaccine_num[0]}`;
+    document.getElementById("vaccine-date").innerHTML += ` ${date[0]}`;
+ }
+ 
 
 /* Game board functionality*/
 let boxes = document.querySelectorAll('.box');

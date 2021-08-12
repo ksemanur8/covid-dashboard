@@ -101,6 +101,7 @@ a {
   border-radius: 30px;
   padding: 0px 30px 5px 30px;
   cursor: pointer;
+  border-style: none;
 }
 
 #story-cards {
@@ -129,7 +130,7 @@ a {
 }
 
 .story-card > h2,
-p {
+.story-card > p {
   color: #0b295e;
   line-height: 25px;
 }
