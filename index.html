@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gii6kix.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/yzs8dtw.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="./scripts/main.js" defer></script>
+    <title>COMP 426: Get COVID or Get COVID</title>
+  </head>
+  <body>
+    <div id="vertical-scroller" class="dark-mode">
+      <div id="slides-container">
+        <div class="slide dark-bg" id="zero">
+          <div id="container-0">
+            <h1>Get COVID or get COVID</h1>
+            <p id="tagline">
+              An interactive dashboard for getting the latest updates on
+              COVID-19
+            </p>
+            <a href="#one" class="button">Start</a>
+            <br />
+            <br />
+            <a class="button" id="light-button">Light Mode</a>
+            <a class="button" id="dark-button">Dark Mode</a>
+          </div>
+        </div>
+        <div class="slide" id="one">
+          <div id="container-1">
+            <h1>Top 5 Stories on COVID-19</h1>
+            <div id="story-cards">
+              <div class="story-card" id="card-0">
+                <h2 id="article-title-0"></h2>
+                <img class="article-img" id="article-img-0" />
+                <p id="article-summary-0"></p>
+                <a id="article-link-0" target="_blank" rel="noopener noreferrer"
+                  >Go to article</a
+                >
+              </div>
+              <div class="story-card" id="card-1">
+                <h2 id="article-title-1"></h2>
+                <img class="article-img" id="article-img-1" />
+                <p id="article-summary-1"></p>
+                <a id="article-link-1" target="_blank" rel="noopener noreferrer"
+                  >Go to article</a
+                >
+              </div>
+              <div class="story-card" id="card-2">
+                <h2 id="article-title-2"></h2>
+                <img class="article-img" id="article-img-2" />
+                <p id="article-summary-2"></p>
+                <a id="article-link-2" target="_blank" rel="noopener noreferrer"
+                  >Go to article</a
+                >
+              </div>
+              <div class="story-card" id="card-3">
+                <h2 id="article-title-3"></h2>
+                <img class="article-img" id="article-img-3" />
+                <p id="article-summary-3"></p>
+                <a id="article-link-3" target="_blank" rel="noopener noreferrer"
+                  >Go to article</a
+                >
+              </div>
+              <div class="story-card" id="card-4">
+                <h2 id="article-title-4"></h2>
+                <img class="article-img" id="article-img-4" />
+                <p id="article-summary-4"></p>
+                <a id="article-link-4" target="_blank" rel="noopener noreferrer"
+                  >Go to article</a
+                >
+              </div>
+            </div>
+            <a href="#two" class="button">Next</a>
+          </div>
+        </div>
+        <div class="slide" id="two">
+          <a href="#three" class="button">Next</a>
+        </div>
+        <div class="slide" id="three">
+          <a href="#four" class="button">Next</a>
+        </div>
+
+        <div class="slide" id="four">
+          <div id="container-4">
+            <h1>Game time! Let's see how much you know about COVID-19</h1>
+            <h3>Please select the true statements</h3>
+            <div class="game-board">
+              <div class="box true">
+                <p>
+                  The 3 FDA-approved COVID-19 vaccines are: Pfizer BioNTech,
+                  Moderna, and Janssen (a.k.a Johnson & Johnson).
+                </p>
+              </div>
+              <div class="box false">
+                <p>
+                  There is no clear evidence to prove that masks prevent the
+                  spread of the virus.
+                </p>
+              </div>
+              <div class="box false">
+                <p>
+                  Getting the vaccine can cause you to test positive for
+                  COVID-19.
+                </p>
+              </div>
+              <div class="box true">
+                <p>
+                  Fully vaccinated people can still transmit the virus, but at a
+                  low rate.
+                </p>
+              </div>
+              <div class="box false">
+                <p>
+                  Fully vaccinated people can't transmit the virus so they don't
+                  need to take any precautions.
+                </p>
+              </div>
+              <div class="box false">
+                <p>Fully vaccinated = immune to COVID-19.</p>
+              </div>
+              <div class="box true">
+                <p>
+                  Being vaccinated means you have received the best protection
+                  available against severe complications from COVID-19 and a
+                  better chance to fight off the virus if you get exposed to it.
+                </p>
+              </div>
+              <div class="box false">
+                <p>
+                  COVID-19 vaccines authorized for use in the United States can
+                  shed or release their components.
+                </p>
+              </div>
+            </div>
+            <div>
+              <br />
+              <a class="button" id="score">Score</a>
+              <a class="button" id="reset">Reset</a>
+            </div>
+            <br />
+            <div id="game-result"><p id="result-text"></p></div>
+            <br />
+            <a href="#five" class="button">Next</a>
+          </div>
+        </div>
+        <div class="slide" id="five">
+          <h1>Thank you for visiting.</h1>
+          <h2>Sources:</h2>
+          <br />
+          <a
+            href="https://health.clevelandclinic.org/can-vaccinated-people-transmit-covid-19-to-others/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Cleveland Clinic</a
+          >
+          <br />
+          <a
+            href="https://www.fda.gov/consumers/consumer-updates/learn-more-about-covid-19-vaccines-fda"
+            target="_blank"
+            rel="noopener noreferrer"
+            >FDA</a
+          >
+          <br />
+          <a
+            href="https://www.projecthope.org/fact-or-fiction-6-myths-about-covid-19/01/2021/?campaignid=1590500333&adgroupid=95558604618&creative=428259207811&keyword=&gclid=CjwKCAjwpMOIBhBAEiwAy5M6YNDHe-5p-b07kiW2NBtyuB8xq7hkL5DDz8mw5sPp-W60oe9iIc9SiRoCsu8QAvD_BwE"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Project Hope</a
+          >
+          <br />
+          <a
+            href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/facts.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CDC</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

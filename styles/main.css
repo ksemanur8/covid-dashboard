@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "Trattatello";
+  src: url(fonts/trattatello.ttf) format("ttf");
+}
+
+* {
+  margin: 0;
+}
+
+.dark-mode {
+  color: white;
+  background-color: #0b295e;
+}
+
+.light-mode {
+  color: white;
+  background-color: #4980dd;
+}
+
+.dark-bg {
+  background-image: url("../images/home-bg-dark.png");
+}
+
+.light-bg {
+  background-image: url("../images/home-bg-light.png");
+}
+
+h1 {
+  font-family: "Trattatello", "Times New Roman", Times, serif;
+  font-size: 42pt;
+  text-align: center;
+  line-height: 80px;
+}
+
+h2,
+h3,
+p,
+li {
+  font-family: macho, sans-serif;
+  font-style: normal;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  font-family: macho, sans-serif;
+  color: white;
+}
+
+#five > a:visited {
+  color: white;
+}
+
+#vertical-scroller {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-x: hide;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+
+#slides-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide {
+  min-width: 100vw;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+#zero {
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-0 {
+  text-align: center;
+}
+
+#tagline {
+  padding: 0px 0px 30px 0px;
+  font-size: 18pt;
+  color: white;
+}
+
+.button {
+  font-family: macho, sans-serif;
+  font-weight: 700;
+  font-size: 18pt;
+  font-style: normal;
+  color: #0b295e;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 0px 30px 5px 30px;
+  cursor: pointer;
+}
+
+#story-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.story-card {
+  border-radius: 10px;
+  margin: 5px;
+  background-color: rgb(189, 211, 253);
+  box-shadow: 0px 0px 5px #ffffff;
+  color: #0b295e;
+  padding: 5px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.story-card > a {
+  color: #0b295e;
+}
+
+.story-card > h2,
+p {
+  color: #0b295e;
+  line-height: 25px;
+}
+
+.article-img {
+  max-width: 100%;
+}
+
+.story-card:hover {
+  transform: translateX(0.1rem) translateY(-0.1rem);
+}
+
+@media (max-width: 900px) {
+  #story-cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+}
+
+/*Game styling*/
+#container-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.box {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.863);
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 0px 0px 5px rgba(189, 239, 252, 0.5);
+  padding: 10px;
+}
+
+.box:hover {
+  transform: translateX(0.1rem) translateY(-0.1rem);
+}
+
+.box > p {
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.box-select {
+  background-color: #afcfff;
+}
+
+.incorrect {
+  background-color: #c11f1e;
+}
+
+.incorrect p {
+  color: white;
+}
+
+.correct {
+  background-color: #128527;
+}
+
+.correct p {
+  color: white;
+}
+
+#result-text {
+  color: white;
+}
