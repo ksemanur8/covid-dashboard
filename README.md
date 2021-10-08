@@ -1,5 +1,7 @@
 # webdev-final
 
+View here: https://ksemanur8.github.io/covid-dashboard/. 
+
 Welcome to my submission for the COMP 426 Final Project.
 <br/>
 <br/>
